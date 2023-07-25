@@ -2,8 +2,8 @@ body{
     background-image: url(img/estudos.jpg);
     background-size:cover;
     background-repeat: no-repeat;
-    background-clip: border-box;
-
+    background-clip:content-box;
+    background-attachment:scroll;
 }
 
 .titulo{
@@ -15,24 +15,25 @@ body{
 
 .notas {
     display: flex;
-    margin: 0em 37em;
+    margin-top: 6.5em;
+    margin-left: 40em;
+    margin-bottom: -1em;
     flex-direction: column;
     align-items: baseline;
     text-align: center;
-    font-size: 16px;
-    gap: 2px;
+    font-size: 14px;
     color: black;
     text-shadow: 2px 1px white;
-    padding: 1px;
 
 }
 
-#aluno, #nota1, #nota2, #nota3, #nota4, #botao {
+#aluno, #media_aprovacao, #valor_divisao, #nota1, #nota2, #nota3, #nota4, #botao {
     background-color: aqua;
+    margin-bottom: -1em;
 }
 
 #botao{
-    margin: 0em 33em;
+    margin: 1em 30.7em;
     padding: 0px 14px;
     font-size: 18px;
     width: 200px;
@@ -40,21 +41,33 @@ body{
 
 @media only screen and (max-device-width: 600px) {
 
-    .titulo {margin-left: 50%; font-size: 30px; white-space: nowrap;}
+    .titulo {margin-left: 55%; font-size: 35px; white-space: nowrap;}
 
-    .notas {margin-left: 90%; font-size: 14px; white-space: nowrap;}
+    .notas {margin-top: 1em; margin-left: 100%; font-size: 14px; white-space: nowrap;}
 
     #botao {margin-left: 90%; font-size: 18px; white-space: nowrap;}
+
+    body{
+        background-position: center;
+     
+     }
 
 }
 
 @media only screen and (max-device-width: 900px) {
 
-    .titulo {margin-left: 20%; font-size: 30px; white-space: nowrap;}
+    .titulo {margin-bottom: 0.1em; margin-left: 13%; font-size: 30px; white-space: nowrap;}
 
-    .notas {margin-left: 50%; font-size: 14px; white-space: nowrap;}
+    .notas {margin-top: 2.3em; margin-bottom: 0.1; margin-left: 50%; font-size: 14px; white-space: nowrap;}
 
-    #botao {margin-left: 50%; font-size: 18px; white-space: nowrap;}
+    #botao {margin-left: 47%; font-size: 18px; white-space: nowrap;}
+    
+    body{
+       
+       background-size: cover;
+       background-position:20%;
+       background-repeat: repeat-y;
+    }
 
 
 }

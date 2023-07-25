@@ -10,15 +10,12 @@
     <h1 class="titulo">Calcule as médias dos seus alunos</h1>
     <div class="notas">
         <b>Nome do aluno</b> <input id="aluno" type="text" /><br>
-        <br>
+        <b>Informe a média para aprovação</b> <input id="media_aprovacao" type="number"/><br>
+        <b>Por quanto deseja dividir a nota total?</b> <input id="valor_divisao" type="number" /><br>
         <b>Primeira nota</b> <input id="nota1" type="number"/><br>
-        <br>
         <b>Segunda nota</b> <input id="nota2" type="number"/><br>
-        <br>
         <b>Terceira nota</b> <input id="nota3" type="number"/><br>
-        <br>
         <b>Quarta nota</b><input id="nota4" type="number"/><br>
-        <br>
     </div>    
         <button onclick= "media()" id="botao"><b>Calcular média</b></button>
     
@@ -38,19 +35,16 @@
         function media(nota_1,nota_2,nota_3,nota_4) {
 
             var nome = document.getElementById("aluno").value;
-
+            var media_aprova = parseFloat(document.getElementById("media_aprovacao").value);
+            var divisao_nota = parseFloat(document.getElementById("valor_divisao").value);
             var nota_1 = parseFloat(document.getElementById("nota1").value);
             var nota_2 = parseFloat(document.getElementById("nota2").value);
             var nota_3 = parseFloat(document.getElementById("nota3").value);
             var nota_4 = parseFloat(document.getElementById("nota4").value);
 
-            var somaNotas = nota_1+nota_2+nota_3+nota_4;
+            var media = (nota_1+nota_2+nota_3+nota_4)/divisao_nota;
 
-            var media = somaNotas/4;
-
-            //alert(" A média do " + nome + " foi " + media + ".");
-
-            if (media < 7 ) {
+            if (media < media_aprova ) {
 
                 alert("Recuperação!" + " A média do " + nome + " foi " + media + ".");
             } else {
